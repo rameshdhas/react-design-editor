@@ -1,19 +1,23 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+import path from 'path'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import tsconfigPaths from "vite-tsconfig-paths"
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://api.layerhub.pro",
-        changeOrigin: true,
-        secure: false,
-        ws: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.tsx'),
+      name: 'react-design-editor',
+      fileName: (format) => `react-design-editor.${format}.js`
     },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React'
+        }
+      }
+    }
   },
+  plugins: [react(), tsconfigPaths()],
 })

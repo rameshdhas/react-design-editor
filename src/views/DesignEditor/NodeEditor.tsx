@@ -8,8 +8,10 @@ import EditorContainer from "./components/EditorContainer"
 const NodeEditor = () => {
   return (
     <EditorContainer>
+        <Navbar />
       <div style={{ display: "flex", flex: 1 }}>
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+           <Toolbox />
           <Canvas />
           <Footer />
         </div>
