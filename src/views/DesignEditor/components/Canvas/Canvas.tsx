@@ -12,7 +12,7 @@ const Canvas = () => {
       <ContextMenu />
       <LayerhubCanvas
         config={{
-          background: "#f1f2f6",
+
           controlsPosition: {
             rotation: "BOTTOM",
           },
