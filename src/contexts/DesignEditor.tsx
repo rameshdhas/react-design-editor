@@ -45,7 +45,7 @@ export const DesignEditorContext = React.createContext<ISceneEditorContext>({
     type: "",
   },
   setCurrentDesign: () => {},
-  isSidebarOpen: true,
+  isSidebarOpen: false,
   setIsSidebarOpen: () => {},
   editorType: "NONE",
   setEditorType: () => {},
@@ -89,7 +89,7 @@ export const DesignEditorProvider = ({ children }: { children: React.ReactNode }
     scenes: [],
     type: "",
   })
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)
   const [editorType, setEditorType] = React.useState<DesignType>("NONE")
   const [displayPlayback, setDisplayPlayback] = React.useState<boolean>(false)
   const [displayPreview, setDisplayPreview] = React.useState<boolean>(false)
