@@ -5,8 +5,8 @@ const EditorContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <Block
       $style={{
-        width: "100vw",
-        height: "100vh",
+        width: "750px",
+        height: "750px",
         display: "flex",
         flexDirection: "column",
         background: "#FFFFFF",
