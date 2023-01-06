@@ -319,6 +319,7 @@ const Navbar = () => {
             <Play size={24} />
           </Button>
 
+{/*
           <Button
             size="compact"
             onClick={() => window.location.replace("https://github.com/layerhub-io/react-design-editor")}
@@ -335,6 +336,7 @@ const Navbar = () => {
           >
             Try PRO
           </Button>
+          */}
         </Block>
       </Container>
     </ThemeProvider>
