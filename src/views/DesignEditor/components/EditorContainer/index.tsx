@@ -11,6 +11,7 @@ const EditorContainer = ({ children }: { children: React.ReactNode }) => {
         flexDirection: "column",
         background: "#FFFFFF",
         fontFamily: "Uber Move Text",
+        margin: "auto"
       }}
     >
       {children}
